@@ -1,0 +1,24 @@
+:root{
+  --cor0:#5C1D67;
+  --cor1:#4063F0;
+  --cor2:#6CBFFD;
+  --cor4:#312D9E;
+  --cor5:#200D23;
+}
+
+/* body defaults already styled by Tailwind; minimal custom rules */
+html,body{height:100%}
+input,select,textarea{font-family:inherit}
+.bg-gradient-custom {
+  background: linear-gradient(135deg,var(--cor0),var(--cor4));
+}
+
+/* small helper for glass feel on login/register */
+.backglass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* table small visuals */
+table thead th { font-weight:600; color:#374151; }

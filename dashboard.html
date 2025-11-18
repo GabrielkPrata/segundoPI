@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/
+tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <header class="bg-purple-700 text-white p-4 flex justify-between itemscenter shadow">
+    <div class="flex items-center gap-4">
+      <img src="images/alunologo.png" class="w-12" />
+      <h1 class="text-xl font-semibold">Painel do Sistema</h1>
+    </div>
+    <button id="logout" class="btn-secondary">Sair</button>
+  </header>
+
+  <main class="p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <section class="card">
+        <h2 class="card-title">Cadastrar Curso</h2>
+        <form id="course-form" class="space-y-3">
+          <input type="text" id="course-name" placeholder="Nome" class="input" required>
+          <input type="text" id="course-code" placeholder="Código" class="input">
+          <textarea id="course-desc" placeholder="Descrição" class="input"></textarea>
+          <button class="btn-primary w-full">Salvar</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">Cadastrar Aluno</h2>
+        <form id="student-form" class="space-y-3">
+          <input type="text" id="student-name" placeholder="Nome" class="input" required>
+          <input type="text" id="student-matricula" placeholder="Matrícula" class="input" required>
+          <input type="email" id="student-email" placeholder="Email" class="input">
+          <select id="student-course" class="input"></select>
+          <button class="btn-primary w-full">Salvar</button>
+        </form>
+      </section>
+
+    </div>
+
+    <section class="card mt-6">
+      <h2 class="card-title">Lista de Alunos</h2>
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b">
+            <th>Nome</th>
+            <th>Matrícula</th>
+            <th>Email</th>
+            <th>Curso</th>
+          </tr>
+        </thead>
+        <tbody id="students-table"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="js/modules/auth.js"></script>
+  <script type="module" src="js/modules/cursos.js"></script>
+  <script type="module" src="js/modules/alunos.js"></script>
+</body>
+
+</html
