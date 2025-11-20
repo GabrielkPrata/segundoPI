@@ -2,9 +2,8 @@
 import { SUPABASE_URL, SUPABASE_ANON_KEY, saveSession, clearSession } from
     './supabase.js';
 const baseHeaders = {
-    "Content-Type": "application/json", "apikey":
-        5
-SUPABASE_ANON_KEY
+    "Content-Type": "application/json", 
+    "apikey": SUPABASE_ANON_KEY // CORRIGIDO (Removido o 5)
 };
 export async function signup(email, password) {
     const res = await fetch(`${SUPABASE_URL}/auth/v1/signup`, {
@@ -14,8 +13,8 @@ export async function signup(email, password) {
     return res.json();
 }
 export async function login(email, password) {
-    const res = await fetch(`${SUPABASE_URL}/auth/v1/token?
-grant_type=password`, {
+    // URL CORRIGIDA (Removida a quebra de linha)
+    const res = await fetch(`${SUPABASE_URL}/auth/v1/token?grant_type=password`, {
         method: 'POST', headers: baseHeaders,
         body: JSON.stringify({ email, password })
     });

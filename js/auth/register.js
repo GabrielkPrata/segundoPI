@@ -1,5 +1,5 @@
 // js/auth/register.js
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../supabaseClient.js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../modules/supabase.js'; // CAMINHO CORRIGIDO
 
 const form = document.getElementById('register-form');
 if (form) {
@@ -19,7 +19,6 @@ if (form) {
         alert(data?.error_description || data?.error || 'Erro no cadastro');
         return;
       }
-      // Opcional: salvar nome em uma tabela profiles (se desejar)
       alert('Cadastro realizado! Verifique seu e-mail (se necessário) e faça login.');
       window.location.href = 'index.html';
     } catch (err) {

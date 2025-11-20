@@ -17,8 +17,7 @@ export async function createCourse(course) {
 }
 export async function updateCourse(id, course) {
     const res = await fetch(`${SUPABASE_URL}/rest/v1/courses?id=eq.${id}`, {
-        6
-method: 'PATCH', headers: defaultHeaders(false), body:
+        method: 'PATCH', headers: defaultHeaders(false), body: // CORRIGIDO (Removido o 6)
             JSON.stringify(course)
     });
     return res.json();

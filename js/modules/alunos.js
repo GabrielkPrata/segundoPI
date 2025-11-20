@@ -2,8 +2,7 @@
 import { SUPABASE_URL, defaultHeaders, getSession } from './supabase.js';
 export async function fetchStudents(query = '') {
 
-    const url = `${SUPABASE_URL}/rest/v1/students?select=*,course_id(*)${query}
-`;
+    const url = `${SUPABASE_URL}/rest/v1/students?select=*,course_id(*)${query}`; // CORRIGIDO (Removida a quebra de linha)
     const res = await fetch(url, { headers: defaultHeaders(true) });
     if (!res.ok) throw new Error('Falha ao buscar alunos');
     return res.json();
@@ -28,8 +27,7 @@ export async function updateStudent(id, student) {
     if (!res.ok) throw new Error('Falha ao atualizar aluno');
     return res.json();
 }
-7
-export async function deleteStudent(id) {
+export async function deleteStudent(id) { // CORRIGIDO (Removido o 7)
     const res = await fetch(`${SUPABASE_URL}/rest/v1/students?id=eq.${id}`, {
         method: 'DELETE',
         headers: defaultHeaders(true)

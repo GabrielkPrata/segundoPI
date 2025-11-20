@@ -1,5 +1,5 @@
 // js/auth/login.js
-import { SUPABASE_URL, SUPABASE_ANON_KEY, saveSession, getSession } from '../supabaseClient.js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY, saveSession, getSession } from '../modules/supabase.js'; // CAMINHO CORRIGIDO
 
 const form = document.getElementById('login-form');
 if (form) {
@@ -18,7 +18,6 @@ if (form) {
         alert(data?.error_description || data?.error || "Erro ao efetuar login");
         return;
       }
-      // data tem access_token e user info se configurado
       saveSession(data);
       window.location.href = 'dashboard.html';
     } catch (err) {

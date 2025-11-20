@@ -1,5 +1,5 @@
 // js/auth/session.js
-import { getSession, clearSession } from '../supabaseClient.js';
+import { getSession, clearSession } from '../modules/supabase.js'; // CAMINHO CORRIGIDO
 
 const session = getSession();
 if (!session || !session.access_token) {
