@@ -7,6 +7,7 @@
   --cor5:#200D23;
 }
 
+
 html,body{height:100%}
 input,select,textarea{font-family:inherit}
 
@@ -28,6 +29,15 @@ table thead th {
 }
 
 
+
+/* ============================================================
+   DASHBOARD — ESTILOS MELHORADOS E REVISADOS
+   (SEM AFETAR OUTRAS ABAS)
+   ============================================================ */
+
+/***********************
+ * DASHBOARD - CARDS
+ ***********************/
 .dashboard-card {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
@@ -44,6 +54,9 @@ table thead th {
 }
 
 
+/***********************
+ * DASHBOARD - TÍTULOS E TEXTOS
+ ***********************/
 .dashboard-title {
   color: var(--cor2);
   font-size: 1.18rem;
@@ -58,6 +71,9 @@ table thead th {
 }
 
 
+/***********************
+ * DASHBOARD - BOTÕES
+ ***********************/
 .dashboard-btn {
   background: linear-gradient(135deg, var(--cor1), var(--cor0));
   color: #fff;
@@ -76,6 +92,9 @@ table thead th {
 }
 
 
+/***********************
+ * DASHBOARD - TABELAS
+ ***********************/
 .dashboard-table {
   width: 100%;
   border-collapse: collapse;
@@ -106,6 +125,9 @@ table thead th {
 }
 
 
+/***********************
+ * DASHBOARD - GRÁFICOS
+ ***********************/
 .dashboard-chart-container {
   background: rgba(255,255,255,0.06);
   padding: 1rem;
@@ -113,7 +135,3 @@ table thead th {
   box-shadow: 0 3px 12px rgba(0,0,0,0.22);
   backdrop-filter: blur(8px);
 }
-
-
-
-table thead th { font-weight:600; color:#374151; }
