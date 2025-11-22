@@ -1,137 +1,38 @@
-
-:root{
-  --cor0:#5C1D67;
-  --cor1:#4063F0;
-  --cor2:#6CBFFD;
-  --cor4:#312D9E;
-  --cor5:#200D23;
+:root {
+  --cor0: #5C1D67;
+  --cor1: #4063F0;
+  --cor2: #6CBFFD;
+  --cor4: #312D9E;
+  --cor5: #200D23;
 }
 
+/* body defaults já vêm do Tailwind */
+html,
+body {
+  height: 100%;
+}
 
-html,body{height:100%}
-input,select,textarea{font-family:inherit}
+input,
+select,
+textarea {
+  font-family: inherit;
+}
 
+/* gradient usado nas telas */
 .bg-gradient-custom {
-  background: linear-gradient(135deg,var(--cor0),var(--cor4));
+  background: linear-gradient(135deg, var(--cor0), var(--cor4));
 }
 
-/* Efeito "glass" das telas de login/registro */
+/* efeito glass usado em login/register */
 .backglass {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
-/* Cabeçalho da tabela (original) */
-table thead th { 
-  font-weight:600; 
-  color:#374151;
-}
-
-
-
-/* ============================================================
-   DASHBOARD — ESTILOS MELHORADOS E REVISADOS
-   (SEM AFETAR OUTRAS ABAS)
-   ============================================================ */
-
-/***********************
- * DASHBOARD - CARDS
- ***********************/
-.dashboard-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 14px;
-  padding: 1.25rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-  transition: transform .22s ease, box-shadow .22s ease;
-}
-
-.dashboard-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.28);
-}
-
-
-/***********************
- * DASHBOARD - TÍTULOS E TEXTOS
- ***********************/
-.dashboard-title {
-  color: var(--cor2);
-  font-size: 1.18rem;
+/* tabela do dashboard (melhoria leve sem afetar layout) */
+table thead th {
   font-weight: 600;
-  margin-bottom: .55rem;
-}
-
-.dashboard-text {
-  color: #e5e7eb;
-  font-size: .96rem;
-  line-height: 1.45;
-}
-
-
-/***********************
- * DASHBOARD - BOTÕES
- ***********************/
-.dashboard-btn {
-  background: linear-gradient(135deg, var(--cor1), var(--cor0));
-  color: #fff;
-  padding: .55rem 1.25rem;
-  border-radius: 9px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  transition: transform .2s ease, background .25s ease;
-}
-
-.dashboard-btn:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, var(--cor2), var(--cor1));
-}
-
-
-/***********************
- * DASHBOARD - TABELAS
- ***********************/
-.dashboard-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 12px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(7px);
-}
-
-.dashboard-table thead th {
-  background: rgba(255,255,255,0.14);
-  color: #f3f4f6;
-  padding: .75rem .9rem;
-  text-align: left;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-}
-
-.dashboard-table tbody td {
-  padding: .70rem .9rem;
-  color: #e5e7eb;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  transition: background .15s ease;
-}
-
-.dashboard-table tbody tr:hover td {
-  background: rgba(255,255,255,0.05);
-}
-
-
-/***********************
- * DASHBOARD - GRÁFICOS
- ***********************/
-.dashboard-chart-container {
-  background: rgba(255,255,255,0.06);
-  padding: 1rem;
-  border-radius: 14px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.22);
-  backdrop-filter: blur(8px);
-}
+  color: #374151;
+  padding: 8px 6px;
+  border-bottom: 1px solid #e5e7eb; /* mesma linha do*
