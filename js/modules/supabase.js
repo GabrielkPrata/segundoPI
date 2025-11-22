@@ -2,7 +2,6 @@
 
 export const SUPABASE_URL = "https://hxontajqeaqjnpeorzcx.supabase.co";
 export const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4b250YWpxZWFxam5wZW9yemN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM3NTYzNjEsImV4cCI6MjA3OTMzMjM2MX0.cd87fI7JNkhkiBSfUrQNbiMa-52e934zdKksCzZe2w4";
-
 export function defaultHeaders(withAuth = false) {
     const h = {
         "Content-Type": "application/json",
