@@ -110,3 +110,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
     }
 });
+
+// FORMULÁRIO DE CURSOS
+const courseForm = document.getElementById('course-form');
+if (courseForm) {
+    courseForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const payload = {
+            name: document.getElementById('course-name').value.trim(),
+            code: document.getElementById('course-code').value.trim() || null,
+            description: document.getElementById('course-desc').value.trim() || null
+        };
+
+        try {
+            await createCourse(payload);
+            courseForm.reset();
+            alert("Curso cadastrado com sucesso!");
+            await populateCourses(); // atualiza lista no select
+        } catch (err) {
+            console.error(err);
+            alert("Erro ao cadastrar curso.");
+        }
+    });
+}
